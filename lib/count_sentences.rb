@@ -15,12 +15,12 @@ class String
   end
 
   def count_sentences
-<<<<<<< HEAD
-    delimiters = [". ","? ","! "]
-=======
-    delimiters = [".","?","!"]
-    binding.pry
->>>>>>> 4a7d811301293dfb25e171ca9ef05e828c5e4fa8
-    self.split(Regexp.union(delimiters)).count
+    ## internet researched solution
+    #delimiters = [". ","? ","! "]
+    #self.split(Regexp.union(delimiters)).count
+
+    #Flatiron solution
+    #self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+    self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
   end
 end
